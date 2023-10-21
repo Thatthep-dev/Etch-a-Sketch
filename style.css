@@ -1,12 +1,17 @@
-h1 {
-  text-align: center;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
-
 #displayBoard {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   height: 85vh;
+  aspect-ratio: 1;
 }
 
 .grid-row {
