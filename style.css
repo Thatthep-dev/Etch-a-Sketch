@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 85vh;
+  height: 80vh;
   aspect-ratio: 1;
 }
 
@@ -25,4 +25,8 @@ body {
   flex-grow: 1;
   border: 1px solid #0d0dd0;
   box-sizing: border-box;
+}
+
+#resetButton {
+  margin: 0.25em;
 }
