@@ -12,19 +12,20 @@ body {
   flex-wrap: wrap;
   height: 80vh;
   aspect-ratio: 1;
+  border: 0.5em solid rgb(21, 87, 255);
 }
 
 .grid-row {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
-  border: 1px solid #cf1414;
-  box-sizing: border-box;
+  /* border: 1px solid #cf1414;
+  box-sizing: border-box; */
 }
 .grid-column {
   flex-grow: 1;
-  border: 1px solid #0d0dd0;
-  box-sizing: border-box;
+  /* border: 1px solid #0d0dd0;
+  box-sizing: border-box; */
 }
 
 #resetButton {

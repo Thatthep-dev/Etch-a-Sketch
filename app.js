@@ -18,8 +18,16 @@ function createGrid(row, column) {
       newGridRow.appendChild(newGridColumn);
 
       // Add a click event listener to each grid column
-      newGridColumn.addEventListener("click", () => {
-        newGridColumn.style.backgroundColor = "black";
+      newGridColumn.addEventListener("mouseover", (event) => {
+        if (isDrawing) {
+          event.target.style.backgroundColor = "black";
+        }
+      });
+      newGridColumn.addEventListener("mousedown", () => {
+        isDrawing = true;
+      });
+      newGridColumn.addEventListener("mouseup", () => {
+        isDrawing = false;
       });
     }
   }
@@ -34,4 +42,4 @@ resetButton.addEventListener("click", () => {
   });
 });
 
-createGrid(4, 4);
+createGrid(64, 64);
