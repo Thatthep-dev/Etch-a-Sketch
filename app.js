@@ -1,7 +1,8 @@
 // <-- UI SECTION -->
-// Reference point
+// Main Reference point
 const displayBoard = document.querySelector("#displayBoard");
 const resetButton = document.querySelector("#resetButton");
+const setPixelButton = document.querySelector("#setPixelBtn");
 
 // Create grid board
 function createGrid(row, column) {
@@ -12,7 +13,7 @@ function createGrid(row, column) {
     displayBoard.appendChild(newGridRow);
 
     for (let j = 0; j < column; j++) {
-      // Create a new column for each iteration
+      // Create a new cell for each iteration
       const newGridColumn = document.createElement("div");
       newGridColumn.classList.add("grid-column");
       newGridRow.appendChild(newGridColumn);
@@ -42,4 +43,19 @@ resetButton.addEventListener("click", () => {
   });
 });
 
-createGrid(64, 64);
+// <-- SET A PIXEL -->
+let pixel = 16;
+createGrid(pixel, pixel);
+
+setPixelButton.addEventListener("click", () => {
+  pixel = parseInt(prompt("Please enter pixel that you need : "));
+  clearGrid();
+  createGrid(pixel, pixel);
+});
+
+// Function to clear the grid
+function clearGrid() {
+  while (displayBoard.firstChild) {
+    displayBoard.removeChild(displayBoard.firstChild);
+  }
+}
